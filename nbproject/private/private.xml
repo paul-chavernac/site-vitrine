@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/InscriptionController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Entity/Panier.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/home/index.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/LivraisonController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/LogoutController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/paiement/paiement.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/home/produit.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Entity/Commandes.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/PaiementController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/home/panier.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/ProduitController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Entity/User.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/compte/changerMdp.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/.env</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/compte/index.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/compte/consulterCmd.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/Inscription/inscription.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/login/enregistrer.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/PanierController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Entity/Produits.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Entity/Contenu.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/base.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Repository/CmdRepository.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Repository/LivraisonRepository.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/HomeController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Entity/Categorie.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/assets/css/app.scss</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/LoginController.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Repository/CategorieRepository.php</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/templates/login/login.html.twig</file>
+            <file>file:/C:/Users/chave/projetSf4/Activite1-PPE4-Site-vitrine-master/Activite1-PPE4-Site-vitrine-master/ppe4/src/Controller/CompteController.php</file>
+        </group>
+    </open-files>
+</project-private>
