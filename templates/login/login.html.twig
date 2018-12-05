@@ -1,0 +1,86 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+{% block body %}
+    <div class="container">
+        {% if error %}
+            <div>{{ error.messageKey|trans(error.messageData, 'security')}}</div>
+        {% endif %}
+
+        <br>
+        <div class="row text-center justify-content-center "><h2>Connexion</h2></div>
+        <br>
+        <div class="row text-center justify-content-center ">
+
+            <form action="{{ path('login') }}" method="post">
+                <div  class="form-group">
+                    <label for="username">Identifiant :</label>
+                    <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}"/>
+                </div>
+                {#   <div  class="form-group">
+                       <label for="password">Password :</label>
+                       <input class="form-control" type="password" id="password" name="_password" />
+                   </div>#}
+
+                <div  class="form-group">
+                    <label for="mdp">Mot de passe :</label>
+
+                    <input class="form-control" type="password" id="password" name="_password" />
+
+                </div>
+
+
+
+                <div>
+                    <button type="button" id="btn-annuler-connexion" style="margin-top: 10px;"
+                            class="btn btn-grey-border" >Annuler</button>
+                            <br>
+
+                    <button type="submit" style="margin-top: 10px;" class="btn btn-grey-border" >Se connecter</button>
+                    <br>
+                    <a class="btn btn-grey-border" style="margin-top: 10px;" href='{{ path('enregistrement') }}'>Créer un compte </a>
+
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+{% endblock body %}
+{% block javascripts %}
+    <script>
+        $(".btn-connexion").on("click", function () {
+            // alert($(this).val());
+            if ($("#password").val().length < 100)
+                $("#password").val($("#password").val() + $(this).val());
+        });
+        $("#btn-annuler-connexion").on("click", function () {
+            // alert($(this).val());
+            $("#password").val(null);
+        });
+        function genererChiffres() {
+            let chifflesAleatoires = [];
+            while (chifflesAleatoires.length < 10) {
+                let aleat = Math.floor(Math.random() * Math.floor(10));
+                let chiffre = true;
+                if (chifflesAleatoires.length > 0) {
+                    for (let i = 0; i < chifflesAleatoires.length; i++) {
+                        if (aleat == chifflesAleatoires[i]) {
+                            chiffre = false;
+                        }
+                    }
+                }
+                if (chiffre == true) {
+                    chifflesAleatoires.push(aleat);
+                }
+            }
+            return chifflesAleatoires;
+        }
+        function remplirCode(id, tableau) {
+            for (let i = 0; i < 10; i++) {
+                $("#" + id + i).val(tableau[i]);
+                $("#" + id + i).text(tableau[i]);
+            }
+        }
+        remplirCode("btn-connexion-", genererChiffres());
+    </script>
+{% endblock javascripts %}

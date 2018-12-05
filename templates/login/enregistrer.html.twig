@@ -1,0 +1,109 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+{% block body %}
+    <div class="container">
+        <br>
+        <div class="row text-center justify-content-center "><h2>Créer un compte</h2></div>
+        <br>
+        {% if message %}
+            <div class="row text-center justify-content-center ">
+                <div 
+                    {% if succes %} class="alert alert-danger" 
+                    {% else %} class="alert alert-danger" {% endif%}
+                    role="alert">
+                    {{message}}
+                </div>
+            </div>
+        {% endif%}
+        <br/>
+        <div class="row text-center justify-content-center ">
+
+            <form action="{{ path('creerCompte') }}" method="post">
+                <div  class="form-group">
+                    <label for="username">Identifiant :</label>
+                    <input required class="form-control" type="text" id="username" name="user"/>
+                </div>
+                <div  class="form-group">
+                    <label for="mail">E-mail :</label>
+                    <input required class="form-control" type="email" id="mail" name="mail" />
+                </div>
+                <div  class="form-group">
+                    <label for="mdp">Mot de passe :</label>
+                    <input required class="form-control" type="password" id="mdp" name="mdp"/>
+
+                </div>
+
+                <div class="form-group">
+
+
+                    <div>
+                        <button type="button" id="btn-annuler-connexion" style="margin-top: 10px;"
+                                class="btn-grey" >Annuler</button>
+                    </div>
+                </div>
+
+                <div  class="form-group">
+                    <label for="mdpVerif">Verification Mot De Passe :</label>
+                    <input required class="form-control" type="password" id="mdpVerif" name="mdpVerif"/>
+                </div>
+                <div>
+                    <button type="button" id="btn-annuler-verif-connexion" style="margin-top: 10px;"
+                            class="btn-grey" >Annuler</button>
+                </div>
+
+                <br>
+                <button class="btn btn-blue-border" type="submit">Valider</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock body %}
+{% block javascripts %}
+    <script>
+        $(".btn-connexion").on("click", function () {
+            // alert($(this).val());
+            if ($("#mdp").val().length < 100)
+                $("#mdp").val($("#mdp").val() + $(this).val());
+        });
+        $("#btn-annuler-connexion").on("click", function () {
+            // alert($(this).val());
+            $("#mdp").val(null);
+        });
+        $(".btn-verif-connexion").on("click", function () {
+            // alert($(this).val());
+            if ($("#mdpVerif").val().length < 100)
+                $("#mdpVerif").val($("#mdpVerif").val() + $(this).val());
+        });
+        $("#btn-annuler-verif-connexion").on("click", function () {
+            // alert($(this).val());
+            $("#mdpVerif").val(null);
+        });
+        function genererChiffres() {
+            let chifflesAleatoires = [];
+            while (chifflesAleatoires.length < 10) {
+                let aleat = Math.floor(Math.random() * Math.floor(10));
+                let chiffre = true;
+                if (chifflesAleatoires.length > 0) {
+                    for (let i = 0; i < chifflesAleatoires.length; i++) {
+                        if (aleat == chifflesAleatoires[i]) {
+                            chiffre = false;
+                        }
+                    }
+                }
+                if (chiffre == true) {
+                    chifflesAleatoires.push(aleat);
+                }
+            }
+            return chifflesAleatoires;
+        }
+        function remplirCode(id, tableau) {
+            for (let i = 0; i < 10; i++) {
+                $("#" + id + i).val(tableau[i]);
+                $("#" + id + i).text(tableau[i]);
+            }
+        }
+        remplirCode("btn-connexion-", genererChiffres());
+        remplirCode("btn-verif-connexion-", genererChiffres());
+    </script>
+{% endblock javascripts %}

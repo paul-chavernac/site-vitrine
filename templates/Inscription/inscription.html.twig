@@ -1,0 +1,7 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+{% block body %}
+    {{ form_start(form, {'attr':{'id':'formFun'}})}}
+    {{ form_widget(form)}}
+    {{ form_end(form)}}
+{% endblock %}

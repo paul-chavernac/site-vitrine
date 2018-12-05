@@ -1,0 +1,59 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+{% block body %}
+
+
+    <div class="container">
+        <h1 class="center text-center " style="margin-top: 20px; font-size: 50px;"><i>
+                {% block titrecompte %}
+                    Gestion du compte 
+                {%endblock titrecompte %}
+            </i></h1>
+    </div>
+
+    <div class="container-fluid" style="margin-bottom: 20px;" >
+        <div class="row">
+            <div class="col-sm-3" style="margin-top: 50px;">
+                <div class="container border-custom-little font-fam-courrier">
+                    <div class='row'>
+                        <div>
+                            <h2>
+                                <a
+                                    href="{{ path('compte')}}"
+                                    class="btn-transparent">
+                                    Accueil Gestion Compte
+                                </a>
+                            </h2>
+                        </div>                        
+                        <div>
+                            <h2>
+                                <a 
+                                    href="{{ path('changerMdp') }}" 
+                                    class="btn-transparent">
+                                    Changer mot de passe
+                                </a>
+                            </h2>
+                        </div>
+                        <div>
+                            <h2>
+                                <a 
+                                    href="{{ path('commandes') }}" 
+                                    class="btn-transparent">
+                                    Commandes
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 " style="margin-top: 40px;">
+                <div class="container-fluid font-fam-courrier" >
+                    {# <h1 class="title" >Gestion du compte</h1>#}
+                    {% block compte %}
+                    {% endblock compte %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

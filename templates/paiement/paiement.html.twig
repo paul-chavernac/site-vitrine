@@ -1,0 +1,59 @@
+{% extends "compte/index.html.twig" %}
+{% block titrecompte %}
+    Paiement
+{% endblock titrecompte %}
+{% block body %}
+    <div class="row justify-content-center col-11 "><h2>Paiement</h2></div>
+    <div class="container" style="margin-top: 100px;">
+        <div class="row justify-content-center col-11">
+            <div id="paypal-button"></div>
+            <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+            <script>
+
+                paypal.Button.render({
+                    // Configure environment
+                    env: 'sandbox',
+                    client: {
+                        sandbox: 'demo_sandbox_client_id',
+                        production: 'demo_production_client_id'
+                    },
+                    // Customize button (optional)
+                    locale: 'en_US',
+                    style: {
+                        size: 'large',
+                        color: 'gold',
+                        shape: 'pill',
+                    },
+
+                    // Enable Pay Now checkout flow (optional)
+                    commit: true,
+
+                    // Set up a payment
+                    payment: function (data, actions) {
+                        return actions.payment.create({
+                            transactions: [{
+                                    amount: {
+                                        total: '0.01',
+                                        currency: 'USD'
+                                    }
+                                }]
+                        });
+                    },
+                    // Execute the payment
+                    onAuthorize: function (data, actions) {
+                        return actions.payment.execute().then(function () {
+                            // Show a confirmation message to the buyer
+                            window.alert('Paiement Effectué!');
+                        });
+                    }
+                }, '#paypal-button');
+
+            </script>
+            </script>
+        </div>
+        <div class="container" style="margin-top: 50px;">
+            <div class="row justify-content-center col-11">
+                <a href="{{ path('home') }}" class="btn btn-success"><h3>Retour à l'accueil</h3></a>
+            </div>
+        </div>
+    {% endblock body %}

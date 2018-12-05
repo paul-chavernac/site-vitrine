@@ -1,0 +1,79 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+{% block body %}
+    {# <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+             <h1 class="display-4">MediaStore</h1>
+             <p class="lead">ajouter image ici</p>
+         </div>
+     </div>  #} 
+    <div class='background'>
+
+        <div class="container"  >
+
+            <h1 class="center text-center font-fam-courrier" style="min-height: 250px; font-size: 150px;color: red"><i>Rugby Shop</i></h1>
+        </div>
+    </div>
+    {#<div class="separator-test"></div>#}
+
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-sm-3" style="margin-top: 75px;">
+                <div class="container border-custom-little font-fam-courrier">
+                    <div class='row'>
+                        <div>
+                            {% for cat in categories%}
+                                <h4>
+                                    <a href="{{ path('home', { 'categorie': cat.getCatLibelle }) }}" 
+                                       class="btn-transparent">
+                                        {{ cat.getCatLibelle }}
+                                    </a>
+                                </h4>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 offset-1 " style="margin-top: 50px;">
+                <div class="container-fluid font-fam-courrier" >
+
+                    <h1 class="title" >{{page}}</h1>
+                    <hr>
+                    <div class="container-fluid">
+                        <div class="row">
+                            {% for produit in produits %}
+                                {% if produit.getProStock > 0 %}
+                                    <div class="col-sm-3">
+                                        <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+                                            <a href="{{ path('produit', { 'id': produit.getProId }) }}" >
+                                                <img class="card-img-top" height="250" width="900" src="{{produit.getProImage}}" alt="Card image cap">
+                                                <a/>
+                                                <div class="card-body">
+                                                    <p class="card-text">{{produit.getProNom}}</p>
+                                                    <a href="{{ path('produit', { 'id': produit.getProId }) }}" class="btn btn-secondary">Voir</a>
+                                                    <a class="btn btn-dark" href="{{ path('ajoutPanierFromHome', { 'id': produit.getProId }) }}" >
+                                                        <i class="fas fa-shopping-basket"></i>Ajouter au panier</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{%block footer %}
+    <footer style="margin-top: 100px;">
+        <div class="text-center">
+            <p>Contact : chavernac.paul.lurcat@gmail.com</p>
+            <p>Copyright @ 2018</p>
+        </div>
+    </footer>
+{% endblock %}
